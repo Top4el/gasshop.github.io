@@ -32,7 +32,7 @@
             <div class="hero-content">
                 <h1>Надежное газоснабжение для вашего дома и бизнеса</h1>
                 <p>Качественный газ по доступным ценам с доставкой в любую точку города</p>
-                <button class="btn-primary">Заказать сейчас</button>
+                <button class="btn-primary" onclick="openOrderModal()">Заказать сейчас</button>
             </div>
         </section>
 
@@ -43,19 +43,19 @@
                     <img src="{{ url_for('static', filename='images/gas-cylinder.jpg') }}" alt="Газовый баллон">
                     <h3>Баллоны 50л</h3>
                     <p>Стандартные газовые баллоны для бытового использования</p>
-                    <button class="btn-secondary">Подробнее</button>
+                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
                 </div>
                 <div class="product-card">
                     <img src="{{ url_for('static', filename='images/gas-cylinder-large.jpg') }}" alt="Большой газовый баллон">
                     <h3>Баллоны 100л</h3>
                     <p>Большие газовые баллоны для промышленного использования</p>
-                    <button class="btn-secondary">Подробнее</button>
+                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
                 </div>
                 <div class="product-card">
                     <img src="{{ url_for('static', filename='images/gas-equipment.jpg') }}" alt="Газовое оборудование">
                     <h3>Оборудование</h3>
                     <p>Газовое оборудование и комплектующие</p>
-                    <button class="btn-secondary">Подробнее</button>
+                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
                 </div>
             </div>
         </section>
