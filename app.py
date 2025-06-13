@@ -78,4 +78,4 @@ if __name__ == '__main__':
     os.makedirs('static/images', exist_ok=True)
     
     # Запускаем сервер
-    app.run(debug=True) 
+    app.run(host='0.0.0.0', port=5000) 
