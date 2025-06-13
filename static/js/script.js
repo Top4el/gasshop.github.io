@@ -226,20 +226,25 @@ window.onclick = function(event) {
     }
 }
 
-// Обработка форм
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    
-    // Здесь можно добавить отправку данных на сервер
-    console.log('Отправка заказа:', data);
-    
-    // Очистка формы и закрытие модального окна
-    this.reset();
-    closeOrderModal();
-    alert('Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.');
-});
+// Обработка отправки формы заказа
+const orderForm = document.getElementById('orderForm');
+if (orderForm) {
+    orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Получение данных формы
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
+        
+        // Здесь можно добавить отправку данных на сервер
+        console.log('Отправка заказа:', data);
+        
+        // Очистка формы и показ сообщения об успехе
+        this.reset();
+        closeOrderModal();
+        alert('Спасибо за ваш заказ! Мы свяжемся с вами в ближайшее время.');
+    });
+}
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
