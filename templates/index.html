@@ -40,19 +40,25 @@
             <h2>Наша продукция</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="{{ url_for('static', filename='images/gas-cylinder.jpg') }}" alt="Газовый баллон">
+                    <div class="product-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/gas-cylinder.jpg') }}" alt="Газовый баллон">
+                    </div>
                     <h3>Баллоны 50л</h3>
                     <p>Стандартные газовые баллоны для бытового использования</p>
                     <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
                 </div>
                 <div class="product-card">
-                    <img src="{{ url_for('static', filename='images/gas-cylinder-large.jpg') }}" alt="Большой газовый баллон">
+                    <div class="product-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/gas-cylinder-large.jpg') }}" alt="Большой газовый баллон">
+                    </div>
                     <h3>Баллоны 100л</h3>
                     <p>Большие газовые баллоны для промышленного использования</p>
                     <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
                 </div>
                 <div class="product-card">
-                    <img src="{{ url_for('static', filename='images/gas-equipment.jpg') }}" alt="Газовое оборудование">
+                    <div class="product-image-wrapper">
+                        <img src="{{ url_for('static', filename='images/gas-equipment.jpg') }}" alt="Газовое оборудование">
+                    </div>
                     <h3>Оборудование</h3>
                     <p>Газовое оборудование и комплектующие</p>
                     <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
