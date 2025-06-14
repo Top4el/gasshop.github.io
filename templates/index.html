@@ -9,7 +9,7 @@
     <meta property="og:title" content="Газовый магазин - надежное газоснабжение">
     <meta property="og:description" content="Доставка газа, установка и обслуживание газового оборудования">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url_for('index', _external=True) }}">
+    <meta property="og:url" content="{{ url_for('home', _external=True) }}">
     <title>Газовый магазин - надежное газоснабжение для вашего дома и бизнеса</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,6 +19,7 @@
         "@type": "LocalBusiness",
         "name": "Газовый магазин",
         "description": "Надежное газоснабжение для вашего дома и бизнеса",
+        "url": "{{ url_for('home', _external=True) }}",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "ул. Примерная, 123",
