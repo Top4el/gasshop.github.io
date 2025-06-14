@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: {{ url_for('static', filename='sitemap.xml', _external=True) }} 
