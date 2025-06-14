@@ -9,7 +9,14 @@
     <meta property="og:title" content="Газовый магазин - надежное газоснабжение">
     <meta property="og:description" content="Доставка газа, установка и обслуживание газового оборудования">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ url_for('home', _external=True) }}">
+    <meta property="og:url" content="https://gasshop-d4q3.onrender.com/">
+    <meta property="og:image" content="https://gasshop-d4q3.onrender.com/static/images/hero-bg.jpg">
+    <meta property="og:site_name" content="Газовый магазин">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Газовый магазин - надежное газоснабжение">
+    <meta name="twitter:description" content="Доставка газа, установка и обслуживание газового оборудования">
+    <meta name="twitter:image" content="https://gasshop-d4q3.onrender.com/static/images/hero-bg.jpg">
+    <link rel="canonical" href="https://gasshop-d4q3.onrender.com/">
     <title>Газовый магазин - надежное газоснабжение для вашего дома и бизнеса</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -19,7 +26,9 @@
         "@type": "LocalBusiness",
         "name": "Газовый магазин",
         "description": "Надежное газоснабжение для вашего дома и бизнеса",
-        "url": "{{ url_for('home', _external=True) }}",
+        "url": "https://gasshop-d4q3.onrender.com/",
+        "logo": "https://gasshop-d4q3.onrender.com/static/images/logo.png",
+        "image": "https://gasshop-d4q3.onrender.com/static/images/hero-bg.jpg",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "ул. Примерная, 123",
@@ -34,7 +43,16 @@
         "sameAs": [
             "https://vk.com/yourpage",
             "https://t.me/yourchannel"
-        ]
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "55.7558",
+            "longitude": "37.6173"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Ваш город"
+        }
     }
     </script>
 </head>
