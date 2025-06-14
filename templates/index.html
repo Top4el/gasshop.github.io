@@ -3,21 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GasShop - Ваш надежный поставщик газа</title>
+    <meta name="description" content="Газовый магазин - надежное газоснабжение для вашего дома и бизнеса. Доставка газа, установка и обслуживание газового оборудования в вашем регионе.">
+    <meta name="keywords" content="газовый магазин, доставка газа, газовое оборудование, установка газового оборудования, газоснабжение">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Газовый магазин - надежное газоснабжение">
+    <meta property="og:description" content="Доставка газа, установка и обслуживание газового оборудования">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url_for('index', _external=True) }}">
+    <title>Газовый магазин - надежное газоснабжение для вашего дома и бизнеса</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Газовый магазин",
+        "description": "Надежное газоснабжение для вашего дома и бизнеса",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Примерная, 123",
+            "addressLocality": "Ваш город",
+            "addressRegion": "Ваш регион",
+            "postalCode": "123456",
+            "addressCountry": "RU"
+        },
+        "telephone": "+7-XXX-XXX-XXXX",
+        "priceRange": "₽₽",
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "sameAs": [
+            "https://vk.com/yourpage",
+            "https://t.me/yourchannel"
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <h1>GasShop</h1>
+                <h1>Газовый магазин</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#products">Продукция</a></li>
+                <li><a href="#products">Продукты</a></li>
                 <li><a href="#services">Услуги</a></li>
-                <li><a href="#about">О нас</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
             <div class="nav-buttons">
@@ -28,80 +56,79 @@
     </header>
 
     <main>
-        <section id="hero" class="hero">
+        <section class="hero" aria-label="Главный баннер">
             <div class="hero-content">
                 <h1>Надежное газоснабжение для вашего дома и бизнеса</h1>
-                <p>Качественный газ по доступным ценам с доставкой в любую точку города</p>
+                <p>Доставка газа, установка и обслуживание газового оборудования</p>
                 <button class="btn-primary" onclick="openOrderModal()">Заказать сейчас</button>
             </div>
         </section>
 
-        <section id="products" class="products">
-            <h2>Наша продукция</h2>
+        <section id="products" class="products" aria-label="Наши продукты">
+            <h2>Наши продукты</h2>
             <div class="product-grid">
-                <div class="product-card">
+                <article class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/gas-cylinder.jpg') }}" alt="Газовый баллон">
+                        <img src="{{ url_for('static', filename='images/gas-cylinder.jpg') }}" alt="Газовый баллон 50л" loading="lazy">
                     </div>
-                    <h3>Баллоны 50л</h3>
-                    <p>Стандартные газовые баллоны для бытового использования</p>
-                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
-                </div>
-                <div class="product-card">
+                    <h3>Газовый баллон 50л</h3>
+                    <p>Сжиженный газ для бытовых нужд</p>
+                    <button class="btn-primary" onclick="openOrderModal()">Заказать</button>
+                </article>
+                <article class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/gas-cylinder-large.jpg') }}" alt="Большой газовый баллон">
+                        <img src="{{ url_for('static', filename='images/gas-cylinder-27.jpg') }}" alt="Газовый баллон 27л" loading="lazy">
                     </div>
-                    <h3>Баллоны 100л</h3>
-                    <p>Большие газовые баллоны для промышленного использования</p>
-                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
-                </div>
-                <div class="product-card">
+                    <h3>Газовый баллон 27л</h3>
+                    <p>Компактный баллон для небольших нужд</p>
+                    <button class="btn-primary" onclick="openOrderModal()">Заказать</button>
+                </article>
+                <article class="product-card">
                     <div class="product-image-wrapper">
-                        <img src="{{ url_for('static', filename='images/gas-equipment.jpg') }}" alt="Газовое оборудование">
+                        <img src="{{ url_for('static', filename='images/gas-cylinder-12.jpg') }}" alt="Газовый баллон 12л" loading="lazy">
                     </div>
-                    <h3>Оборудование</h3>
-                    <p>Газовое оборудование и комплектующие</p>
-                    <button class="btn-secondary" onclick="openOrderModal()">Подробнее</button>
-                </div>
+                    <h3>Газовый баллон 12л</h3>
+                    <p>Портативный баллон для туризма</p>
+                    <button class="btn-primary" onclick="openOrderModal()">Заказать</button>
+                </article>
             </div>
         </section>
 
-        <section id="services" class="services">
+        <section id="services" class="services" aria-label="Наши услуги">
             <h2>Наши услуги</h2>
             <div class="services-grid">
-                <div class="service-card">
+                <article class="service-card">
                     <i class="fas fa-truck"></i>
-                    <h3>Доставка</h3>
-                    <p>Быстрая доставка в любую точку города</p>
-                </div>
-                <div class="service-card">
+                    <h3>Доставка газа</h3>
+                    <p>Быстрая доставка в любое время</p>
+                </article>
+                <article class="service-card">
                     <i class="fas fa-tools"></i>
-                    <h3>Монтаж</h3>
-                    <p>Профессиональный монтаж газового оборудования</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
+                    <h3>Установка оборудования</h3>
+                    <p>Профессиональный монтаж</p>
+                </article>
+                <article class="service-card">
+                    <i class="fas fa-wrench"></i>
                     <h3>Обслуживание</h3>
-                    <p>Регулярное техническое обслуживание</p>
-                </div>
+                    <p>Регулярное ТО и ремонт</p>
+                </article>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact" aria-label="Контактная информация">
             <h2>Свяжитесь с нами</h2>
             <div class="contact-container">
-                <form class="contact-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Телефон" required>
-                    <textarea placeholder="Ваше сообщение" required></textarea>
+                <form class="contact-form" action="/submit_form" method="POST">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <textarea name="message" placeholder="Сообщение" required></textarea>
                     <button type="submit" class="btn-primary">Отправить</button>
                 </form>
                 <div class="contact-info">
-                    <h3>Контактная информация</h3>
-                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-phone"></i> +7-XXX-XXX-XXXX</p>
                     <p><i class="fas fa-envelope"></i> info@gasshop.ru</p>
-                    <p><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Примерная, 123</p>
+                    <p><i class="fas fa-map-marker-alt"></i> ул. Примерная, 123</p>
                 </div>
             </div>
         </section>
@@ -110,34 +137,27 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>GasShop</h3>
-                <p>Ваш надежный поставщик газа</p>
-            </div>
-            <div class="footer-section">
-                <h3>Навигация</h3>
-                <ul>
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#products">Продукция</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#about">О нас</a></li>
-                </ul>
+                <h3>О нас</h3>
+                <p>Надежный поставщик газа и газового оборудования</p>
             </div>
             <div class="footer-section">
                 <h3>Контакты</h3>
-                <p>Телефон: +7 (999) 123-45-67</p>
-                <p>Email: info@gasshop.ru</p>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +7-XXX-XXX-XXXX</li>
+                    <li><i class="fas fa-envelope"></i> info@gasshop.ru</li>
+                    <li><i class="fas fa-map-marker-alt"></i> ул. Примерная, 123</li>
+                </ul>
             </div>
             <div class="footer-section">
-                <h3>Мы в соцсетях</h3>
+                <h3>Социальные сети</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
                     <a href="#"><i class="fab fa-telegram"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 GasShop. Все права защищены.</p>
+            <p>&copy; 2024 Газовый магазин. Все права защищены.</p>
         </div>
     </footer>
 
